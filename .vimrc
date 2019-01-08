@@ -22,3 +22,4 @@
 :nnoremap j gj
 :nnoremap k gk
 :set colorcolumn=80
+:set linebreak
