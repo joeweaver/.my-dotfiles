@@ -85,7 +85,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+export TERM='xterm-256color'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -115,6 +117,27 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# going to be editing .bashrc a lot
+alias rebash='source ~/.bashrc'
+alias edbash='vim ~/.bashrc'
+
+# easier ls
+alias lsl='ls -lh'
+alias lsa='ls -a'
+
+# typo
+alias mdkir='mkdir'
+
+# activate conda envs
+alias p35='conda activate py35'
+
+# added by Miniconda3 installer
+if [ -d "$home/miniconda3/bin" ]; then
+  export PATH="/home/j/miniconda3/bin:$PATH"
+  . /home/j/miniconda3/etc/profile.d/conda.sh
+fi
+
 
 # Install Ruby Gems to ~/gems
 if [ -d "$HOME/gems" ]; then
