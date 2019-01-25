@@ -1,0 +1,12 @@
+URxvt*geometry: 80x30
+Xft.dpi:    96
+Xft.antialias:  false
+Xft.rgba:   rgb
+Xft.hinting:    false
+Xft.hintstyle:  hintfull
+*foreground:    #BCBCBC
+*background:    #000000
+URxvt*scrollBar:    false
+*VT100*color4:  rgb:00/3b/ee
+URxvt.font:xft:Monospace:pixelsize=15
+Urxvt.boldfont.xft:Monospace-Bold:pixelsize=15
