@@ -22,3 +22,7 @@
 :nnoremap j gj
 :nnoremap k gk
 :set colorcolumn=80
+
+" vim-plug loading
+call plug#begin()
+call plug#end()
