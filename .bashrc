@@ -133,7 +133,7 @@ alias mdkir='mkdir'
 alias p35='conda activate py35'
 
 # added by Miniconda3 installer
-if [ -d "$home/miniconda3/bin" ]; then
+if [ -d "$HOME/miniconda3/bin" ]; then
   export PATH="/home/j/miniconda3/bin:$PATH"
   . /home/j/miniconda3/etc/profile.d/conda.sh
 fi
