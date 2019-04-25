@@ -135,17 +135,24 @@ alias cr='cp -r'
 # activate conda envs
 alias p35='conda activate py35'
 
-# added by Miniconda3 installer
-if [ -d "$HOME/miniconda3/bin" ]; then
-  export PATH="/home/j/miniconda3/bin:$PATH"
-  . /home/j/miniconda3/etc/profile.d/conda.sh
-fi
-
 
 # Install Ruby Gems to ~/gems
 if [ -d "$HOME/gems" ]; then
   export GEM_HOME=$HOME/gems
   export PATH=$HOME/gems/bin:$PATH
+fi
+if [ -d "$HOME/.gems" ]; then
+  export GEM_HOME=$HOME/.gems
+  export PATH=$HOME/.gems/bin:$PATH
+fi
+
+
+if test -f "/usr/bin/clang"; then
+    export CC=/usr/bin/clang
+fi
+
+if test -f "/usr/bin/clang++"; then
+    export CXX=/usr/bin/clang++
 fi
 
 # Load any local .bashrc stuff
@@ -158,11 +165,10 @@ if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/home/joe/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/joe/miniconda3/etc/profile.d/conda.sh"
+# . "/home/joe/miniconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/home/joe/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
