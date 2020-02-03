@@ -44,11 +44,13 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 set wrap
 abbrev shebash #!/usr/bin/env bash
 abbrev czk ✓
+iab <expr> dts strftime('%Y-%m-%d %H:%M')
 set spelllang=en
 set spellfile=$HOME/.my-dotfiles/vim-spell-en.utf-8.add
 set spell
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
+
 
 call plug#begin()
 Plug 'jalvesaq/Nvim-r'
@@ -56,7 +58,15 @@ Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
 Plug 'w0rp/ale'
 Plug 'chrisbra/csv.vim'
+Plug 'vimwiki/vimwiki'
 call plug#end()
+
+let g:vimwiki_list = [{'path':'~/professional/wiki',
+                        \ 'syntax': 'markdown', 'ext': '.md'},
+                        \ {'path':'~/professional/admin/job_search/notes',
+                        \ 'syntax': 'markdown', 'ext': '.md'},
+                        \ {'path':'~/professional/research/cfd_biokinetics/notebook',
+                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " remaping send line for vim-R, check to see
 " if this mucks with other stuff
