@@ -89,6 +89,10 @@ export PATH="/home/joe/miniconda3/bin/:$PATH"
 export GEM_HOME="$HOME/.local/lib/gems"
 export PATH="$HOME/.local/lib/gems/bin:$PATH"
 
+if [ -f "$HOME/.my-local-dotfiles/.zshrc.local" ]; then 
+    source "$HOME/.my-local-dotfiles/.zshrc.local"
+fi
+
 # some local bin files
 export PATH="$HOME/.local/bin:$PATH"
 

@@ -1,0 +1,11 @@
+Add item
+todo.sh add "THING I NEED TO DO +project @context"
+
+Location
+~/professional/planning/todotxt
+
+List projects
+todo.sh lsprj
+
+Usage guide
+https://github.com/todotxt/todo.txt-cli/blob/master/USAGE.md
