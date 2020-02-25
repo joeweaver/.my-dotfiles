@@ -129,11 +129,14 @@ alias lsa='ls -a'
 # typo
 alias mdkir='mkdir'
 
+# tired of cp -r
+alias cr='cp -r'
+
 # activate conda envs
 alias p35='conda activate py35'
 
 # added by Miniconda3 installer
-if [ -d "$home/miniconda3/bin" ]; then
+if [ -d "$HOME/miniconda3/bin" ]; then
   export PATH="/home/j/miniconda3/bin:$PATH"
   . /home/j/miniconda3/etc/profile.d/conda.sh
 fi
@@ -147,3 +150,19 @@ fi
 
 # Load any local .bashrc stuff
 source $HOME/.my-local-dotfiles/.bashrc
+# added by Miniconda3 4.5.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/joe/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/joe/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/joe/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/joe/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
