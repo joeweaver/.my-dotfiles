@@ -65,6 +65,8 @@ let g:vimwiki_list = [{'path':'~/professional/wiki',
                         \ 'syntax': 'markdown', 'ext': '.md'},
                         \ {'path':'~/professional/admin/job_search/notes',
                         \ 'syntax': 'markdown', 'ext': '.md'},
+                        \ {'path':'~/professional/planning/projects/',
+                        \ 'syntax': 'markdown', 'ext': '.md'},
                         \ {'path':'~/professional/research/cfd_biokinetics/notebook',
                         \ 'syntax': 'markdown', 'ext': '.md'}]
 
