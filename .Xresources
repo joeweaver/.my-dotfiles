@@ -10,3 +10,4 @@ URxvt*scrollBar:    false
 *VT100*color4:  rgb:00/3b/ee
 URxvt.font:xft:Monospace:pixelsize=15
 Urxvt.boldfont.xft:Monospace-Bold:pixelsize=15
+URxvt*termName: xterm-256color
