@@ -1,0 +1,2 @@
+# Search installed packages
+sudo apt list --installed | grep <package>

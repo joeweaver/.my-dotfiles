@@ -1,0 +1,5 @@
+# Add bookmark with tags and comment
+buku -a https://ddg.gg search engine, privacy -c Search engine with perks
+
+# List tags
+buku --stag

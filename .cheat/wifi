@@ -1,0 +1,3 @@
+nmcli dev wifi show some wifi stuff
+if it only shows the one
+nmcli dev wifi rescan
