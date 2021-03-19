@@ -6,13 +6,16 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
+syntax on
 filetype on
 set number
 let mapleader = " "
 nnoremap <leader>sc :%s
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap ff za
 inoremap jk <esc>
+inoremap <tab><tab> <esc>>>
+inoremap mdc ``````<esc>2hi
 nnoremap ; :
 set tabstop=4
 set autoindent
@@ -51,6 +54,26 @@ set spell
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
+set foldmethod=indent
+set foldlevel=99
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=78
+    \ expandtab 
+    \ autoindent 
+    \ fileformat=unix
+
+au BufNewFile /media/bigd/professional/wiki/diary/*.md :silent 0r !~/.vim/bin/generate-vimwiki-diary-template '%'
 
 call plug#begin()
 Plug 'jalvesaq/Nvim-r'
@@ -59,6 +82,12 @@ Plug 'gaalcaras/ncm-R'
 Plug 'w0rp/ale'
 Plug 'chrisbra/csv.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'vim-scripts/L9'
+Plug 'frazrepo/vim-rainbow'
+Plug 'preservim/nerdtree'
+Plug 'tools-life/taskwiki'
 call plug#end()
 
 let g:vimwiki_list = [{'path':'~/professional/wiki',
