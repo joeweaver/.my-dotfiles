@@ -172,3 +172,19 @@ else
     fi
 fi
 unset __conda_setup
+export PATH=$PATH:/home/joe/professional/software/NUFEB-variants/NUFEB/lammps/src
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB/thirdparty/vtk/vtk-build/vtk-8.0/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB/thirdparty/hdf5/hdf5/lib
+export PATH=/home/joe/professional/software/NUFEB-variants/NUFEB/thirdparty/openmpi-3.0.6/ompi-build/bin:$PATH
+export LD_LIBRARY_PATH=/home/joe/professional/software/NUFEB-variants/NUFEB/thirdparty/openmpi-3.0.6/ompi-build/lib:$LD_LIBRARY_PATH
+export PATH=$PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-install/lammps/src
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-install/thirdparty/hdf5/hdf5/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-Jsakkos/thirdparty/hdf5/hdf5/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-Jsakkos/thirdparty/vtk/vtk-build/vtk-8.0/lib
+export PATH=$PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-Jsakkos/lammps/src
+export PATH=$PATH:/home/joe/professional/software/NUFEB-variants/add_phototroph/lammps/src
+export PATH=$PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-joe/lammps/src
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-joe/thirdparty/hdf5/hdf5/lib
+export PATH=/home/joe/professional/software/NUFEB-variants/NUFEB-joe/thirdparty/openmpi-3.0.6/ompi-build/bin:$PATH
+export LD_LIBRARY_PATH=/home/joe/professional/software/NUFEB-variants/NUFEB-joe/thirdparty/openmpi-3.0.6/ompi-build/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/joe/professional/software/NUFEB-variants/NUFEB-joe/thirdparty/vtk/vtk-build/vtk-8.0/lib
