@@ -96,8 +96,7 @@ fi
 # some local bin files
 export PATH="$HOME/.local/bin:$PATH"
 
-#alias lock='i3lock -i ~/Downloads/wiz.png -c 000000 -t'
-alias lock='nohup lock.sh && exit'
+alias si='sxiv'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -121,3 +120,6 @@ alias lock='nohup lock.sh && exit'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias lsr="ls -lt | head -n 5"
+alias lso="ls -lt | tail -n 5"
