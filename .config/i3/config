@@ -161,6 +161,7 @@ bar {
 
 # Some stuff should always be floating
 for_window [class="feh" instance="feh"] floating enable
+for_window [class="mpv$"] floating enable
 
 # Some stuff should always be floating
 for_window [class="brave" title="Save File"] fullscreen enable
@@ -203,3 +204,9 @@ focus_follows_mouse no
 bindsym Mod1+g exec i3lock -c 000000
 bindsym Mod1+u exec rofi -show window
 bindsym --release Mod1+s exec scrot '%Y-%m-%d-%H-%M-%s.png' --select -e 'mv $f ~/screenshots/'
+
+exec xrdb ~/.Xresources
+
+exec /usr/bin/numlockx on
+
+exec compton --config ~/.config/compton.conf
