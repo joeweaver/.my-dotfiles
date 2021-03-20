@@ -1,0 +1,5 @@
+smbclient //<hostip>/share --user <winuser>
+mput 
+put
+
+be in the director you want to copy from

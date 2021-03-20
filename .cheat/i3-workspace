@@ -1,0 +1,3 @@
+Rename workspace
+i3-msg 'rename workspace 9 to "9: RDP"'
+

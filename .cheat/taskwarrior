@@ -1,0 +1,8 @@
+Add task with a project
+task add project:NUFEB.move Move to Newcastle wait:2020-10-01
+
+Dependency/blocked
+task add <tas> depends:<blocking task id>
+
+Examples HTML:
+https://taskwarrior.org/docs/examples.html

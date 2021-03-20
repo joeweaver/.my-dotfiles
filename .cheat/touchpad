@@ -1,0 +1,4 @@
+xinput from .xinit
+numbers may change
+xinput list
+xinput list-props #

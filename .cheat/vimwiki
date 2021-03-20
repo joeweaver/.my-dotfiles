@@ -1,0 +1,6 @@
+List wikis: <leader>ws
+Enter index: <leader>ww
+Select wiki: <leader>wi
+Create new diary entry: <leader>w<leader>w
+Diary toc :VimwikiDiaryIndex
+Regen diary toc:  :VimwikiDiaryGenerateLinks

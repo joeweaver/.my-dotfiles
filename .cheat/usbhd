@@ -1,0 +1,2 @@
+Slow speed?
+Try sudo mount -t remount,async /dev/sdc2
