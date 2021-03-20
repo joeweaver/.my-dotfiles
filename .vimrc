@@ -88,6 +88,7 @@ Plug 'vim-scripts/L9'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdtree'
 Plug 'tools-life/taskwiki'
+Plug '/home/joe/professional/software/lammps_vim'
 call plug#end()
 
 let g:vimwiki_list = [{'path':'~/professional/wiki',
