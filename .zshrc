@@ -73,7 +73,7 @@ function precmd () {
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,6 +97,47 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 alias si='sxiv'
+alias xo='xdg-open'
+
+countdown(){
+    date1=$((`date +%s` + $1));
+    while [ "$date1" -ge `date +%s` ]; do 
+    ## Is this more than 24h away?
+    days=$(($(($(( $date1 - $(date +%s))) * 1 ))/86400))
+    echo -ne "$days day(s) and $(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r"; 
+    sleep 1.0
+    done
+}
+
+timater(){
+    notify-send -u critical -t 0 "Work started $(date)"
+    countdown 3180 
+    notify-send -u critical -t 0 "Work done $(date)"
+}
+
+breaktato(){
+    notify-send -u critical -t 0 "Break started $(date)"
+    countdown 1020
+    notify-send -u critical -t 0 "Break ended $(date)"
+}
+
+stopwatch(){
+    date1=`date +%s`; 
+    while true; do 
+    days=$(( $(($(date +%s) - date1)) / 86400 ))
+    echo -ne "$days day(s) and $(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 1.0
+    done
+}
+alias git_pro_name="git config user.name \"Joseph Earl Weaver\";git config user.email \"joe.e.weaver@gmail.com\""
+export LESSOPEN="| /usr/bin/highlight %s --out-format xterm256 --force"
+
+rcw(){
+    curr_workspace=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')      
+    [[ $curr_workspace =~ [0-9] ]] && echo ${BASH_REMATCH[1]}
+    i3-msg "rename workspace $curr_workspace to $curr_workspace:$1"
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
